@@ -1,0 +1,27 @@
+Registration of a user 
+Each user gets 10 tokens
+Store a sentence our database for 1 token
+Retrieve his stored sentence on our database for 1 token
+
+Resource: What your offering eg: &nbsp; +, &nbsp; -, &nbsp; *, &nbsp; / <br>
+Method: GET POST PUT DELETE <br>
+Path: Where Resource is located <br>
+used for: Description of what Method is going to do <br>
+Param: The parameters that the Path is expecting <br>
+on error: the status codes based on user requests <br>
+
+#### Resource Method Chart
+
+Resource
+Address
+Protocol
+Param
+Response and Status codes
+
+| Resource | Address | Protocol | Param | Response and Status codes |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Register User | /register | POST | username:str,pasword:str | 200 ok, 301 password length too short |
+| Store Sentence | /store | POST | username:str,pasword:str,sentence:str | 200 ok, 302 out of tokens, 303 invalid username or password |
+| Retrieve Sentence | /get | POST | username:str,pasword:str | 200 ok, 302 out of tokens, 303 invalid username or password |
+
+

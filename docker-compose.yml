@@ -1,0 +1,20 @@
+# To control each of the containers from a single place
+# There are many version of docker-compose
+# docker-compose creats the network to communicate to the database
+version: '3'
+services:
+    # The first service is web
+    web:
+        # we specify the directory
+        build: ./web
+        # we map port 5000 to 5000
+        ports: 
+            - "5000:5000"
+        # we now say this web sever is dependent on the db service
+        links:
+            - db
+    db:
+        # We build db from ./db
+        build: ./db
+    # web2:
+    #     build: ./web2
